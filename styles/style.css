@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body{
+   /* height: 100vh; */
+    background-color: rgb(136, 136, 208);
+}
+
+.main{
+    background-color: rgb(193, 234, 234);
+    display: flex;
+    justify-content: flex-end;
+    gap: 80px;
+    height: 100%;
+    padding: 3%;
+}
+.main-sec1{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    /* background-color: rgb(196, 166, 224); */
+    width: 45%;
+    /* height: 100%; */
+
+    padding:8% 0 2% 0;
+    /* border-radius: 32px; */
+
+}
+
+.sec1-entrada-text{
+    background-color: transparent;
+    width: 100%;
+    height: 350px;
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    outline: none;
+    resize: none;
+    border: none;
+}
+
+.sec1-entrada-text::placeholder {
+    color: rgb(246, 241, 241);
+}
+
+.sec1-div-info-btn{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div1-reglas{
+
+    display: flex;
+
+} 
+
+
+.div1-text-reglas{
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.material-icons{
+    color: rgb(29, 57, 93);
+}
+
+.div2-botones{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 2.7% 0 0 0 ;
+
+}
+
+.div2-btn-encrip{
+    flex: 1;
+    font-size: 1rem;
+    /* width: 328px; */
+    padding: 24px 0;
+    border-radius: 24px;
+    border: 1px solid white;
+    width: 50%;
+    background-color: transparent;
+}
+
+.div2-btn-encrip:hover{
+    background-color: rgb(172, 202, 192);
+}
+
+.div2-btn-desencrip{
+    flex: 1;
+    font-size: 1rem;
+    /* width: 328px;  */
+    padding: 24px 0;
+    border-radius: 24px;
+    border: 1px solid white;
+    width: 50%;
+    background-color: transparent;
+}
+
+.div2-btn-desencrip:hover{
+    background-color: rgb(172, 202, 192);
+}
+
+.main-sec2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(226, 160, 160);
+    width:30% ; 
+    /* height: 100%; */
+    padding: 2%;
+    border-radius: 32px;
+    box-shadow: 0 8px 15px 0 rgba(0,0,0,0.1), 0 6px 10px 0 rgba(0,0,0,0.19);
+}
+
+.sec2-salida-tex{
+    background-image: url(../images/Muñeco.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    background-color: transparent;
+    width: 100%;
+    height: 350px;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    /* padding: 0  0 12% 0; */
+    outline: none;
+    resize: none;
+    border: none;
+    
+}
+
+.sec2-div1-text-info{
+    
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    color: rgb(242, 246, 245);
+}
+
+.div1-titulo{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.div1-parrafo{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.sec2-div-boton{
+    display: flex;
+    justify-content: center;
+}
+
+.div-btn-copiar{
+    flex: 1;
+    font-size: 1rem;
+    /* width: 336px;  */
+    padding: 24px 0;
+    border-radius: 24px;
+    border: 1px solid white;
+    width: 50%;
+    background-color: transparent;
+}
+
+.div-btn-copiar:hover{
+    background-color: rgba(170, 116, 105, 0.578);
+}
+
+.footer{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.div-footer{
+   display: flex;
+   gap: 50px;
+}
+
+.enlace-footer{
+    color:black;
+    background-color: aliceblue;
+    /* padding: 15%; */
+    /* margin: 5%; */
+    border-radius: 24px;
+}
+.parrafo-footer{
+    font-family: "Inter", sans-serif;
+    font-size:0.75rem ;
+}
