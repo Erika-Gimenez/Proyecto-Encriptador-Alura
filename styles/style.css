@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+    --primer-color:#55AD9B;
+    --segundo-color:#95D2B3;
+    --tercer-color:#D8EFD3;
+    --cuarto-color:#F1F8E8;
+    --color-opcional-negro:#000000;
+    --color-opcional-blanco:#f6f6f6;
+    --font-size-extra-grande:3rem;
+    --font-size-grande:2rem;
+    --font-size-mediano:1.5rem;
+    --font-size-chico:1rem;
+    --font-size-extra-chico:0.75rem;
+    --font-family:"Inter", sans-serif;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -11,12 +26,21 @@
     background-color: rgb(136, 136, 208);
 }
 
+/* .header{
+
+    background-color: var(--primer-color);
+}
+
+.header-logo{
+
+}esto lo edite compuchiquita */
+
 .main{
-    background-color: rgb(193, 234, 234);
+    background-color:var(--cuarto-color);
     display: flex;
     justify-content: flex-end;
     gap: 80px;
-    height: 100%;
+    height: 100vh;
     padding: 3%;
 }
 .main-sec1{
@@ -38,15 +62,15 @@
     background-color: transparent;
     width: 100%;
     height: 350px;
-    font-family: "Inter", sans-serif;
-    font-size: 2rem;
+    font-family:var(--font-family) ;
+    font-size: var(--font-size-grande);
     outline: none;
     resize: none;
     border: none;
 }
 
 .sec1-entrada-text::placeholder {
-    color: rgb(246, 241, 241);
+    color: var(--primer-color);
 }
 
 .sec1-div-info-btn{
@@ -63,14 +87,14 @@
 
 
 .div1-text-reglas{
-    font-family: "Inter", sans-serif;
-    font-size: 0.75rem;
+    font-family: var(--font-family);
+    font-size: var(--font-size-extra-chico);
     display: flex;
     align-items: center;
 }
 
 .material-icons{
-    color: rgb(29, 57, 93);
+    color: var(--primer-color);
 }
 
 .div2-botones{
@@ -83,39 +107,43 @@
 
 .div2-btn-encrip{
     flex: 1;
-    font-size: 1rem;
+    font-size: var(--font-size-extra-chico);
     /* width: 328px; */
     padding: 24px 0;
     border-radius: 24px;
-    border: 1px solid white;
+    border: 1px solid var(--primer-color);
     width: 50%;
     background-color: transparent;
+    /* color: var(--primer-color);esto lo edite compuchiquita */
 }
 
 .div2-btn-encrip:hover{
-    background-color: rgb(172, 202, 192);
+    background-color: var(--primer-color);
+    color: var(--cuarto-color);
 }
 
 .div2-btn-desencrip{
     flex: 1;
-    font-size: 1rem;
+    font-size: var(--font-size-extra-chico);
     /* width: 328px;  */
     padding: 24px 0;
     border-radius: 24px;
-    border: 1px solid white;
+    border: 1px solid var(--primer-color);
     width: 50%;
     background-color: transparent;
+    /* color: var(--primer-color);esto lo edite compuchiquita */
 }
 
 .div2-btn-desencrip:hover{
-    background-color: rgb(172, 202, 192);
+    background-color:var(--segundo-color);
+    color: var(--cuarto-color);
 }
 
 .main-sec2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(226, 160, 160);
+    background-color:var(--segundo-color);
     width:30% ; 
     /* height: 100%; */
     padding: 2%;
@@ -131,8 +159,8 @@
     background-color: transparent;
     width: 100%;
     height: 350px;
-    font-family: "Inter", sans-serif;
-    font-size: 1.5rem;
+    font-family: var(--font-family);
+    font-size: var(--font-size-mediano);
     /* padding: 0  0 12% 0; */
     outline: none;
     resize: none;
@@ -141,21 +169,22 @@
 }
 
 .sec2-div1-text-info{
-    
+    padding: 1%;
     display: flex;
     flex-direction: column;
-    font-family: "Inter", sans-serif;
-    color: rgb(242, 246, 245);
+    font-family: var(--font-family);
+    color:var(--cuarto-color);
 }
 
 .div1-titulo{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: var(--font-size-mediano);
+    margin-bottom: 1%;
 }
 
 .div1-parrafo{
     text-align: center;
-    font-size: 1rem;
+    font-size: var(--font-size-chico);
 }
 
 .sec2-div-boton{
@@ -165,23 +194,26 @@
 
 .div-btn-copiar{
     flex: 1;
-    font-size: 1rem;
+    font-size: var(--font-size-chico);
     /* width: 336px;  */
     padding: 24px 0;
     border-radius: 24px;
-    border: 1px solid white;
+    border: 1px solid var(--cuarto-color);
     width: 50%;
     background-color: transparent;
+    /* color: var(--cuarto-color);esto lo edite compuchiquita */
 }
 
 .div-btn-copiar:hover{
-    background-color: rgba(170, 116, 105, 0.578);
+    background-color:var(--tercer-color);
+    color: var(--primer-color);
 }
 
 .footer{
     display: flex;
     flex-direction: column; 
     align-items: center;
+    /* background-color: var(--primer-color);esto lo edite compuchiquita */
 }
 
 .div-footer{
@@ -190,13 +222,14 @@
 }
 
 .enlace-footer{
-    color:black;
-    background-color: aliceblue;
+    color:var(--cuarto-color);
+    /* background-color: aliceblue; */
     /* padding: 15%; */
     /* margin: 5%; */
     border-radius: 24px;
 }
 .parrafo-footer{
-    font-family: "Inter", sans-serif;
-    font-size:0.75rem ;
+    color: var(--cuarto-color);
+    font-family: var(--font-family);
+    font-size:var(--font-size-extra-chico) ;
 }
