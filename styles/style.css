@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --primer-color:#55AD9B;
-    --segundo-color:#95D2B3;
-    --tercer-color:#D8EFD3;
-    --cuarto-color:#F1F8E8;
-    --color-opcional-negro:#000000;
-    --color-opcional-blanco:#f6f6f6;
-    --font-size-extra-grande:3rem;
-    --font-size-grande:2rem;
-    --font-size-mediano:1.5rem;
-    --font-size-chico:1rem;
-    --font-size-extra-chico:0.75rem;
+    --primer-color:#070709;
+    --segundo-color:#ff1cc0;
+    --tercer-color:#f6f6f6;
+    --cuarto-color:#b131fa;
+    --color-opcional-1:#f6f6f618;
+    --color-opcional-2:#a2a392;
+    --size-extra-grande:3rem;
+    --size-grande:2rem;
+    --size-mediano:1.5rem;
+    --size-chico:1rem;
+    --size-extra-chico:0.75rem;
     --font-family:"Inter", sans-serif;
 }
 
@@ -22,58 +22,69 @@
 }
 
 .body{
-   /* height: 100vh; */
-    background-color: rgb(136, 136, 208);
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--primer-color);
+    font-family: var(--font-family);
 }
-
-/* .header{
-
+/*------------------------------ ENCABEZADO ---------*/
+.header{
+    flex-grow: 1;
+    padding: 1%;
     background-color: var(--primer-color);
 }
 
 .header-logo{
 
-}esto lo edite compuchiquita */
+}
 
-.main{
-    background-color:var(--cuarto-color);
+/*------------------------------ PRINCIPAL ---------*/
+
+.main{background-size: cover;
+    max-height: 77.5vh;
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-image: url(../images/fondo-rosa.jpg);
+    /* background-color:var(--segundo-color); */
     display: flex;
     justify-content: flex-end;
+    flex-grow: 1;
     gap: 80px;
-    height: 100vh;
-    padding: 3%;
+    padding: 2%;
 }
+
+/*--------------------------------- SECCION 1 --------------------------------------*/
+
 .main-sec1{
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     background-color: transparent;
-    /* background-color: rgb(196, 166, 224); */
-    width: 45%;
-    /* height: 100%; */
-
-    padding:8% 0 2% 0;
-    /* border-radius: 32px; */
-
+    max-width: 680px;
+    max-height: 944px;
+    padding:0 0 2% 0;
 }
 
+/*------------------------------ ENTRADA AREA DE TEXTO ---------*/
 .sec1-entrada-text{
     background-color: transparent;
     width: 100%;
-    height: 350px;
+    max-height: 350px;
     font-family:var(--font-family) ;
-    font-size: var(--font-size-grande);
+    font-size: var(--size-grande);
     outline: none;
     resize: none;
     border: none;
 }
 
 .sec1-entrada-text::placeholder {
-    color: var(--primer-color);
+    color: var(--tercer-color);
 }
 
 .sec1-div-info-btn{
+    gap: 16px;
     display: flex;
     flex-direction: column;
 
@@ -87,81 +98,86 @@
 
 
 .div1-text-reglas{
-    font-family: var(--font-family);
-    font-size: var(--font-size-extra-chico);
+   
+    font-size: var(--size-extra-chico);
     display: flex;
     align-items: center;
+    color: var(--tercer-color);
 }
 
 .material-icons{
-    color: var(--primer-color);
+    color: var(--segundo-color);
 }
+
+/*------------------------------ BOTONES SECCION 1 (ENCRIPTADO, DESENCRIPTADO)--------------------------------------*/
 
 .div2-botones{
     display: flex;
     justify-content: center;
     gap: 24px;
-    margin: 2.7% 0 0 0 ;
-
+    
 }
 
 .div2-btn-encrip{
     flex: 1;
-    font-size: var(--font-size-extra-chico);
-    /* width: 328px; */
-    padding: 24px 0;
+    padding: var(--size-mediano) 0;
     border-radius: 24px;
-    border: 1px solid var(--primer-color);
-    width: 50%;
+    border: 1px solid var(--segundo-color);
     background-color: transparent;
-    /* color: var(--primer-color);esto lo edite compuchiquita */
+    color: var(--tercer-color);
+    font-size: var(--size-chico);
 }
 
 .div2-btn-encrip:hover{
-    background-color: var(--primer-color);
-    color: var(--cuarto-color);
+    background-color: var(--cuarto-color);
+    color: var(--segundo-color);
 }
 
 .div2-btn-desencrip{
     flex: 1;
-    font-size: var(--font-size-extra-chico);
-    /* width: 328px;  */
-    padding: 24px 0;
+    font-size: var(--size-chico);
+    padding: var(--size-mediano) 0;
     border-radius: 24px;
-    border: 1px solid var(--primer-color);
-    width: 50%;
+    border: 1px solid var(--segundo-color);
     background-color: transparent;
-    /* color: var(--primer-color);esto lo edite compuchiquita */
+    color: var(--tercer-color);
 }
 
 .div2-btn-desencrip:hover{
-    background-color:var(--segundo-color);
-    color: var(--cuarto-color);
+    background-color:var(--cuarto-color);
+    color: var(--segundo-color);
 }
 
+/*------------------------------ SECCION 2 --------------------------------------*/
+
 .main-sec2{
+   
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color:var(--segundo-color);
-    width:30% ; 
-    /* height: 100%; */
+    gap: 16px;
+    background-color: #f6f6f618;
+    /* background-color:var(--primer-color); */
+    max-width:400px ; 
+    max-height: 944px;
     padding: 2%;
     border-radius: 32px;
-    box-shadow: 0 8px 15px 0 rgba(0,0,0,0.1), 0 6px 10px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 0px 15px 0 var(--segundo-color), 0 0px 15px 0 var(--tercer-color);
+    /* box-shadow: 0 8px 15px 0 var(--segundo-color), 0 6px 10px 0 var(--tercer-color); */
 }
 
+/*--------------------------------- SALIDA DE AREA TEXTO --------------------------------------*/
+
 .sec2-salida-tex{
-    background-image: url(../images/Muñeco.png);
+    background-image: url(../images/llama.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: bottom;
+    background-position: center;
     background-color: transparent;
     width: 100%;
-    height: 350px;
+    max-height: 350px;
     font-family: var(--font-family);
-    font-size: var(--font-size-mediano);
-    /* padding: 0  0 12% 0; */
+    font-size: var(--size-mediano);
     outline: none;
     resize: none;
     border: none;
@@ -169,23 +185,23 @@
 }
 
 .sec2-div1-text-info{
-    padding: 1%;
+    gap: 16px;
     display: flex;
     flex-direction: column;
-    font-family: var(--font-family);
-    color:var(--cuarto-color);
+    color:var(--tercer-color);
 }
 
 .div1-titulo{
     text-align: center;
-    font-size: var(--font-size-mediano);
-    margin-bottom: 1%;
+    font-size: var(--size-mediano);
 }
 
 .div1-parrafo{
     text-align: center;
-    font-size: var(--font-size-chico);
+    font-size: var(--size-chico);
 }
+
+/*------------------------------ BOTON SECCION 2 (COPIAR) --------------------------------------*/
 
 .sec2-div-boton{
     display: flex;
@@ -194,42 +210,50 @@
 
 .div-btn-copiar{
     flex: 1;
-    font-size: var(--font-size-chico);
-    /* width: 336px;  */
-    padding: 24px 0;
+    font-size: var(--size-chico);
+    padding: var(--size-mediano) 0;
     border-radius: 24px;
-    border: 1px solid var(--cuarto-color);
-    width: 50%;
+    border: 1px solid var(--segundo-color);
     background-color: transparent;
-    /* color: var(--cuarto-color);esto lo edite compuchiquita */
+    color: var(--tercer-color);
 }
 
 .div-btn-copiar:hover{
-    background-color:var(--tercer-color);
-    color: var(--primer-color);
+    background-color:var(--cuarto-color);
+    color: var(--segundo-color);
 }
 
+/*------------------------------ PIE DE PAGINA --------------------------------------*/
+
 .footer{
+    padding: 1%;
+    gap: 10px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    flex-grow: 1; 
     align-items: center;
-    /* background-color: var(--primer-color);esto lo edite compuchiquita */
+    background-color: var(--primer-color);
 }
 
 .div-footer{
+    
    display: flex;
    gap: 50px;
+  
 }
 
 .enlace-footer{
-    color:var(--cuarto-color);
-    /* background-color: aliceblue; */
-    /* padding: 15%; */
-    /* margin: 5%; */
-    border-radius: 24px;
+    color:var(--tercer-color); 
+    padding:3% ;
 }
+
+.enlace-footer:hover{
+    
+    border-radius:15px ;
+    outline: 1px solid var(--segundo-color);
+}
+
 .parrafo-footer{
-    color: var(--cuarto-color);
-    font-family: var(--font-family);
-    font-size:var(--font-size-extra-chico) ;
+    color: var(--tercer-color);
+    font-size:var(--size-extra-chico) ;
 }
