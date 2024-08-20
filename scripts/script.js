@@ -8,11 +8,23 @@ const botonEncriptador = document.querySelector(".div2-btn-encrip");
 const botonDesencriptador = document.querySelector(".div2-btn-desencrip");
 const botonCopiar = document.querySelector(".div-btn-copiar");
 
+function validarTexto(texto) {
+    const tieneMayusculas = /[A-Z]/.test(texto);
+    const tieneTildes = /[áéíóúü]/.test(texto);
 
+    if (tieneMayusculas && tieneTildes) {
+        return "Solo se permiten minúsculas sin tildes.";
+    } else if (tieneMayusculas) {
+        return "Solo se permiten minúsculas.";
+    } else if (tieneTildes) {
+        return "Solo se permiten caracteres sin tildes.";
+    }
+    return null;
+}
 
 function encriptar(frase) {
-   let encriptado = " ";
-   
+   let encriptado = "";
+
    for (let i = 0; i < frase.length; i++) {
     const opc = frase[i];
 
@@ -57,9 +69,22 @@ function desEncriptar(frase) {
     return frase;
 }
 
-   function eventoBotonEncriptar() {
+function eventoBotonEncriptar() {
 
     let frase = entradaTexto.value;
+
+    const mensajeError = validarTexto(frase);
+
+    if (mensajeError) {
+        salidaTexto.textContent = mensajeError;
+        salidaTexto.style.backgroundImage = "none";
+        salidaTexto.style.display = "block";
+        divEnunciadoSalidaTexto.style.display = "none";
+        botonCopiar.style.display = "block";
+        botonCopiar.textContent = "OK";
+        return;
+    }
+
     let encriptado = encriptar(frase);
     console.log(entradaTexto.value);
     console.log(encriptado);
@@ -72,18 +97,42 @@ function desEncriptar(frase) {
     divEnunciadoSalidaTexto.style.display = "none";
     botonCopiar.style.display = "block";
     
-   }
+}
 
-   function eventoBotonDesencriptar(){
+function eventoBotonDesencriptar(){
     let frase = entradaTexto.value;
     let desencriptado = desEncriptar(frase);
 
     salidaTexto.textContent = desencriptado;
     entradaTexto.value = "";
-    console.log(desencriptado)
-    
+    console.log(desencriptado);
+    salidaTexto.style.backgroundImage = "none";
+    salidaTexto.style.display = "block";
+    divEnunciadoSalidaTexto.style.display = "none";
+    botonCopiar.style.display = "block";
 
-   }
+}
+
+async function copiarFrase(frase) {
+
+    try {
+        await navigator.clipboard.writeText(frase);
+       
+    } catch (error) {
+        console.error(error.message);
+    }
+    
+}
+
+function eventoBotonCopiar() {
+    let frase = salidaTexto.textContent; 
+    copiarFrase(frase);
+    console.log(frase);
+    location.reload();
+
+}
+  
 
    botonEncriptador.addEventListener('click', eventoBotonEncriptar);
    botonDesencriptador.addEventListener('click', eventoBotonDesencriptar);
+   botonCopiar.addEventListener('click',eventoBotonCopiar);
