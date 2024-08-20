@@ -8,9 +8,10 @@ const botonEncriptador = document.querySelector(".div2-btn-encrip");
 const botonDesencriptador = document.querySelector(".div2-btn-desencrip");
 const botonCopiar = document.querySelector(".div-btn-copiar");
 
-function validarTexto(texto) {
-    const tieneMayusculas = /[A-Z]/.test(texto);
-    const tieneTildes = /[áéíóúü]/.test(texto);
+
+function validarFrase(frase) {
+    const tieneMayusculas = /[A-Z]/.test(frase);
+    const tieneTildes = /[áéíóúü]/.test(frase);
 
     if (tieneMayusculas && tieneTildes) {
         return "Solo se permiten minúsculas sin tildes.";
@@ -73,7 +74,7 @@ function eventoBotonEncriptar() {
 
     let frase = entradaTexto.value;
 
-    const mensajeError = validarTexto(frase);
+    const mensajeError = validarFrase(frase);
 
     if (mensajeError) {
         salidaTexto.textContent = mensajeError;
@@ -117,7 +118,7 @@ async function copiarFrase(frase) {
 
     try {
         await navigator.clipboard.writeText(frase);
-       
+        location.reload();
     } catch (error) {
         console.error(error.message);
     }
@@ -128,7 +129,7 @@ function eventoBotonCopiar() {
     let frase = salidaTexto.textContent; 
     copiarFrase(frase);
     console.log(frase);
-    location.reload();
+    
 
 }
   

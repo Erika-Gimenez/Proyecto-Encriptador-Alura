@@ -175,7 +175,7 @@
 
 .sec2-salida-tex{
     display: block;
-    background-image: url(../images/ojo-neon-rosa.png);
+    background-image: url(../images/candado-casi-blanco.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -322,7 +322,7 @@
 @media (max-width: 425px) {
     .header{
         height: 60px;
-        flex-grow: 1;
+        /* flex-grow: 1; */
     }
 
     .header-logo{
@@ -351,7 +351,8 @@
         padding: var(--size-chico) 0;
     }
     .footer{
-        gap: 7px;
+        gap: 0; 
+        padding: 0;
     }
 
     .parrafo-footer{
