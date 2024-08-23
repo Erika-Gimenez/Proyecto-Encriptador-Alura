@@ -2,7 +2,6 @@ const entradaTexto = document.querySelector(".sec1-entrada-text");
 const salidaTexto = document.querySelector(".sec2-salida-tex");
 
 const divEnunciadoSalidaTexto = document.querySelector(".sec2-div1-text-info");
-// const divBotonCopiar = document.querySelector(".sec2-div-boton");
 
 const botonEncriptador = document.querySelector(".div2-btn-encrip");
 const botonDesencriptador = document.querySelector(".div2-btn-desencrip");
@@ -12,7 +11,7 @@ const botonCopiar = document.querySelector(".div-btn-copiar");
 function validarFrase(frase) {
     const tieneMayusculas = /[A-Z]/.test(frase);
     const tieneTildes = /[áéíóúü]/.test(frase);
-
+    // const tieneCaracteresEspeciales = /[^a-zA-Z0-9\s]/.test(frase);
     if (tieneMayusculas && tieneTildes) {
         return "Solo se permiten minúsculas sin tildes.";
     } else if (tieneMayusculas) {
@@ -20,6 +19,9 @@ function validarFrase(frase) {
     } else if (tieneTildes) {
         return "Solo se permiten caracteres sin tildes.";
     }
+    // else if (tieneCaracteresEspeciales){
+    //     return "La frase no puede contener caracteres especiales."
+    // } no lo pide pero lo dejo por si las dudas 
     return null;
 }
 
@@ -54,8 +56,6 @@ function encriptar(frase) {
    return encriptado;
 }
 
-//esto lo sacaste del video. revisar bien no te salio con el segun volve a intentar otra opc con tiempo
-
 function desEncriptar(frase) {
 
     let matrizFrase = [["ai","a"],["enter","e"],["imes","i"],["ober","o"],["ufat", "u"]];
@@ -83,6 +83,9 @@ function eventoBotonEncriptar() {
         divEnunciadoSalidaTexto.style.display = "none";
         botonCopiar.style.display = "block";
         botonCopiar.textContent = "OK";
+        botonCopiar.removeEventListener('click',eventoBotonCopiar);
+        botonCopiar.addEventListener('click',botonAvisoCondicion);
+
         return;
     }
 
@@ -111,26 +114,39 @@ function eventoBotonDesencriptar(){
     salidaTexto.style.display = "block";
     divEnunciadoSalidaTexto.style.display = "none";
     botonCopiar.style.display = "block";
-
+ 
 }
 
-async function copiarFrase(frase) {
+/*navigator.clipboard.writeText(frase) 
+writeText() este metodo es asincrono quiere decir que devuelve una promesa
+que puede resolverce o rechazarce dependiendo de la operacion por ese motivo
+se utiliza una async await espera la promesa  try si la promesa se aprueba  catch para manejar errores 
+*/
 
+async function copiarFrase(frase) {
+    let copiaExitosa = false;
     try {
         await navigator.clipboard.writeText(frase);
-        location.reload();
+        alert('Texto copiado con éxito');
+        copiaExitosa = true;
+       
     } catch (error) {
         console.error(error.message);
     }
-    
+   
+    if (copiaExitosa) {
+        window.location.href = window.location.href;
+    }
 }
 
 function eventoBotonCopiar() {
     let frase = salidaTexto.textContent; 
     copiarFrase(frase);
     console.log(frase);
-    
+}
 
+function botonAvisoCondicion() {
+    location.reload();
 }
   
 
