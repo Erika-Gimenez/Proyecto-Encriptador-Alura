@@ -22,6 +22,11 @@
 }
 
 .body{
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-image: url(../images/fondo-rosa.jpg);
+    backdrop-filter:hue-rotate(322deg);
     display:flex;
     flex-direction: column;
     min-height: 100vh;
@@ -44,17 +49,13 @@
 /*------------------------------ PRINCIPAL ---------*/
 
 .main{
-    background-size: cover;
-    filter: grayscale(100%);
-    background-position:center ;
-    background-repeat: no-repeat;
-    background-image: url(../images/fondo-city.jpg);
-    /* background-color:var(--segundo-color); */
+   
+    filter:hue-rotate(59deg);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-grow: 1;
     gap: 80px;
-    padding: 2%;
+    padding: 1%;
 }
 
 /*--------------------------------- SECCION 1 --------------------------------------*/
@@ -136,6 +137,7 @@
 .div2-btn-encrip:hover{
     /* background-color: var(--cuarto-color); */
     color: var(--segundo-color);
+    outline: 1px solid var(--tercer-color);
 }
 
 .div2-btn-desencrip{
@@ -151,6 +153,7 @@
 .div2-btn-desencrip:hover{
     /* background-color:var(--cuarto-color); */
     color: var(--segundo-color);
+    outline: 1px solid var(--tercer-color);
 }
 
 /*------------------------------ SECCION 2 --------------------------------------*/
@@ -231,6 +234,7 @@
 .div-btn-copiar:hover{
     /* background-color:var(--cuarto-color); */
     color: var(--segundo-color);
+    outline: 1px solid var(--tercer-color);
 }
 
 /*------------------------------ PIE DE PAGINA --------------------------------------*/
@@ -254,13 +258,11 @@
 
 .enlace-footer{
     color:var(--tercer-color); 
-    padding:3% ;
+    
 }
 
 .enlace-footer:hover{
-    
-    border-radius:15px ;
-    outline: 1px solid var(--tercer-color);
+    color: var(--cuarto-color);
 }
 
 .parrafo-footer{

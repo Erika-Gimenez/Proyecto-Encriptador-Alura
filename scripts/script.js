@@ -11,17 +11,17 @@ const botonCopiar = document.querySelector(".div-btn-copiar");
 function validarFrase(frase) {
     const tieneMayusculas = /[A-Z]/.test(frase);
     const tieneTildes = /[áéíóúü]/.test(frase);
-    // const tieneCaracteresEspeciales = /[^a-zA-Z0-9\s]/.test(frase);
+    const tieneCaracteresEspeciales = /[^a-zA-Z0-9\s]/.test(frase);
     if (tieneMayusculas && tieneTildes) {
-        return "Solo se permiten minúsculas sin tildes.";
+        return "Solo se permiten texto en minúscula sin tildes.";
     } else if (tieneMayusculas) {
-        return "Solo se permiten minúsculas.";
+        return "Solo se permiten texto minúsculas.";
     } else if (tieneTildes) {
-        return "Solo se permiten caracteres sin tildes.";
+        return "Solo se permiten texto sin tildes.";
     }
-    // else if (tieneCaracteresEspeciales){
-    //     return "La frase no puede contener caracteres especiales."
-    // } no lo pide pero lo dejo por si las dudas 
+    else if (tieneCaracteresEspeciales){
+        return "El texto no puede contener caracteres especiales."
+    }  
     return null;
 }
 
@@ -90,11 +90,11 @@ function eventoBotonEncriptar() {
     }
 
     let encriptado = encriptar(frase);
-    console.log(entradaTexto.value);
-    console.log(encriptado);
+    // console.log(entradaTexto.value);
+    // console.log(encriptado);
     salidaTexto.textContent = encriptado;
 
-     entradaTexto.value = "";// por el momento no veo q lo pida pero lo dejo 
+     entradaTexto.value = ""; 
 
     salidaTexto.style.backgroundImage = "none";
     salidaTexto.style.display = "block";
@@ -109,7 +109,7 @@ function eventoBotonDesencriptar(){
 
     salidaTexto.textContent = desencriptado;
     entradaTexto.value = "";
-    console.log(desencriptado);
+    // console.log(desencriptado);
     salidaTexto.style.backgroundImage = "none";
     salidaTexto.style.display = "block";
     divEnunciadoSalidaTexto.style.display = "none";
@@ -117,17 +117,25 @@ function eventoBotonDesencriptar(){
  
 }
 
-/*navigator.clipboard.writeText(frase) 
-writeText() este metodo es asincrono quiere decir que devuelve una promesa
-que puede resolverce o rechazarce dependiendo de la operacion por ese motivo
-se utiliza una async await espera la promesa  try si la promesa se aprueba  catch para manejar errores 
+/* 
+navigator.clipboard.writeText(frase) 
+El método writeText() es asincrónico, lo que significa que devuelve una promesa que puede resolverse o rechazarse en función del éxito o fracaso de la operación de copiar al portapapeles. 
+
+Por esta razón, usamos async/await: 
+- `async` se utiliza para definir una función asincrónica, permitiendo el uso de `await` dentro de ella.
+- `await` espera a que la promesa devuelta por `writeText()` se resuelva (es decir, que el texto se copie con éxito) o se rechace (si ocurre un error).
+
+El bloque `try` intenta ejecutar la operación de copiar el texto y, si tiene éxito, muestra una alerta indicando que el texto fue copiado correctamente. 
+En caso de que la promesa se rechace (por ejemplo, debido a restricciones de seguridad del navegador o problemas con el portapapeles), el bloque `catch` captura el error y lo maneja, mostrando un mensaje de error en la consola.
+
+Después de intentar copiar el texto, si la operación fue exitosa (`copiaExitosa` es true), se recarga la página actual.
 */
 
 async function copiarFrase(frase) {
     let copiaExitosa = false;
     try {
         await navigator.clipboard.writeText(frase);
-        alert('Texto copiado con éxito');
+        // alert('Texto copiado con éxito');
         copiaExitosa = true;
        
     } catch (error) {
@@ -142,7 +150,7 @@ async function copiarFrase(frase) {
 function eventoBotonCopiar() {
     let frase = salidaTexto.textContent; 
     copiarFrase(frase);
-    console.log(frase);
+    // console.log(frase);
 }
 
 function botonAvisoCondicion() {
