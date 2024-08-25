@@ -52,6 +52,6 @@ index.html
 ## Autores ✒️
 [<img src="https://github.com/user-attachments/assets/1e99f8e5-f229-4128-837a-554d2844c64c" width=115><br><sub>Gimenez Erika</sub>](https://github.com/Erika-Gimenez)
 ## Contacto 😊
-* [Linkedin](www.linkedin.com/in/erika-gimenez).
+* [Linkedin](https://www.linkedin.com/in/erika-gimenez/).
 * [GitHub](https://github.com/Erika-Gimenez).
  
