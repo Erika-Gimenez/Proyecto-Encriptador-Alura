@@ -7,8 +7,7 @@
 
 <h2>Encriptador de texto</h2>
 
-<p>Este proyecto es una herramienta de encriptación y desencriptación de texto. Utiliza un algoritmo de cifrado personalizado para proteger la información sensible,
-  permitiendo a los usuarios encriptar y desencriptar mensajes de forma segura a través de una interfaz simple y fácil de usar.</p>
+<p>Este proyecto es una herramienta para convertir mensajes en códigos secretos y luego volverlos a su forma original. Con esta herramienta, puedes ocultar tus mensajes para que nadie más pueda leerlos, y después, con la misma herramienta, puedes revelar el mensaje secreto para ti o para tus amigos. Todo esto se hace de una manera sencilla y segura, utilizando un método especial creado para proteger la información.</p>
 
 ## Funcionalidades del proyecto 📄
 
@@ -30,24 +29,28 @@
 -¿Qué cosas necesitas para instalar el software?-
 * [Visual Studio Code](https://code.visualstudio.com/): Necesitarás un editor de código, como Visual Studio Code, para editar y ejecutar el proyecto.
 * Navegador Web: Para visualizar la aplicación web.
- -Instala y descarga Visual Studio Code.- 
+ -Instala y descarga Visual Studio Code:- 
 ```
  https://code.visualstudio.com/
 ```
 ### Clona el repositorio
-- Crea una carpeta en tu maquina y clona el repositorio.-
+- Crea una carpeta en tu máquina y clona el repositorio en ella, puedes usar el siguiente comando de Git:-
 ```
+https://github.com/Erika-Gimenez/Proyecto-Encriptador-Alura.git
+```
+- Ejecuta el archivo index.html en tu navegador:-
+```
+index.html
+```
+- ¡Listo! Diviértete transformando tus textos o mensajes en un idioma secreto.-
 
-```
-- Ejecuta el archivo index.html en tu navegador.-
-```
-
-```
-- Listo! diviertete trasformando tus textos o mensajes en un idioma secreto.-
-
+## Contribuciones ⌨️
+-¡Me encantaría tu ayuda para mejorar este proyecto! Puedes contribuir de varias maneras:
+* Si encuentras algún error o problema.
+* Si tienes ideas para nuevas funcionalidades o mejoras.
+- Porfavor crea un issue para discutirlo. Me encanta recibir nuevas ideas.
 ## Autores ✒️
-[<img src="https://avatars.githubusercontent.com/u/37356058?v=4" width=115><br><sub>Gimenez Erika</sub>](https://github.com/Erika-Gimenez)
-
+[<img src="https://github.com/user-attachments/assets/1e99f8e5-f229-4128-837a-554d2844c64c" width=115><br><sub>Gimenez Erika</sub>](https://github.com/Erika-Gimenez)
 ## Contacto 😊
 * [Linkedin](www.linkedin.com/in/erika-gimenez).
 * [GitHub](https://github.com/Erika-Gimenez).
