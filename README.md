@@ -24,28 +24,30 @@
 * **Visual Studio Code** - El editor de código utilizado.
 
 ## Acceso al proyecto 📁 
--Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.-
+Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 ### Pre-requisitos
--¿Qué cosas necesitas para instalar el software?-
-* [Visual Studio Code](https://code.visualstudio.com/): Necesitarás un editor de código, como Visual Studio Code, para editar y ejecutar el proyecto.
-* Navegador Web: Para visualizar la aplicación web.
- -Instala y descarga Visual Studio Code:- 
+¿Qué cosas necesitas para instalar el software?
+1. [Visual Studio Code](https://code.visualstudio.com/): Necesitarás un editor de código, como Visual Studio Code, para editar y ejecutar el proyecto.
+2. Navegador Web: Para visualizar la aplicación web.
+  
+  
+* _Instala y descarga Visual Studio Code:_
 ```
  https://code.visualstudio.com/
 ```
 ### Clona el repositorio
-- Crea una carpeta en tu máquina y clona el repositorio en ella, puedes usar el siguiente comando de Git:-
+* _Crea una carpeta en tu máquina y clona el repositorio en ella, puedes usar el siguiente comando de Git:_
 ```
 https://github.com/Erika-Gimenez/Proyecto-Encriptador-Alura.git
 ```
-- Ejecuta el archivo index.html en tu navegador:-
+* _Ejecuta el archivo index.html en tu navegador:_
 ```
 index.html
 ```
 - ¡Listo! Diviértete transformando tus textos o mensajes en un idioma secreto.-
 
 ## Contribuciones ⌨️
--¡Me encantaría tu ayuda para mejorar este proyecto! Puedes contribuir de varias maneras:
+¡Me encantaría tu ayuda para mejorar este proyecto! Puedes contribuir de varias maneras:
 * Si encuentras algún error o problema.
 * Si tienes ideas para nuevas funcionalidades o mejoras.
 - Porfavor crea un issue para discutirlo. Me encanta recibir nuevas ideas.
