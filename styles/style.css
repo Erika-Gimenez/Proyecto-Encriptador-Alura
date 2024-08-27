@@ -55,7 +55,7 @@
     justify-content: center;
     flex-grow: 1;
     gap: 80px;
-    padding: 1%;
+    padding: 2%;
 }
 
 /*--------------------------------- SECCION 1 --------------------------------------*/
@@ -64,18 +64,17 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    /* background-color: transparent; */
+    justify-content: space-between;
     max-width: 680px;
     max-height: 944px;
-    padding:0 0 2% 0;
+    padding:7% 0 2% 0;
 }
 
 /*------------------------------ ENTRADA AREA DE TEXTO ---------*/
 .sec1-entrada-text{
     background-color: transparent;
     width: 100%;
-    max-height: 300px;
+    max-height: 630px;
     font-family:var(--font-family) ;
     font-size: var(--size-grande);
     outline: none;
@@ -278,7 +277,7 @@
     .main {
         max-height: none;
         flex-direction: column;
-        align-items: center;
+        justify-content: flex-end;
         gap: 64px;
     }
 
@@ -291,7 +290,7 @@
     }
 
     .sec1-entrada-text {
-        max-height: 210px;
+        min-height: 700px;
     }
 
     .main-sec2 {
@@ -305,7 +304,7 @@
     .sec2-salida-tex {
         display: none;
         background-image: none;
-        max-height: 200px;
+        /* max-height: 260px; */
     }
 
     .sec2-div1-text-info{
@@ -331,16 +330,13 @@
         max-height: 30px;
     }
 
-    .main {
-        gap: 40px;
-    }
-
     .sec1-entrada-text {
-        max-height: 170px;
+        min-height: 0;
+        max-height: 400px;
     }
 
     .sec2-salida-tex {
-        max-height: 175px;
+        max-height: 400px;
     }
 
     .div2-botones {
