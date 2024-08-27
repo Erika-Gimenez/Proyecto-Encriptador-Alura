@@ -15,7 +15,7 @@ function validarFrase(frase) {
     if (tieneMayusculas && tieneTildes) {
         return "Solo se permiten texto en minúscula sin tildes.";
     } else if (tieneMayusculas) {
-        return "Solo se permiten texto minúsculas.";
+        return "Solo se permiten texto en minúsculas.";
     } else if (tieneTildes) {
         return "Solo se permiten texto sin tildes.";
     }
